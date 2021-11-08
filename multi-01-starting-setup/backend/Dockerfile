@@ -13,7 +13,7 @@ EXPOSE 80
 CMD ["node", "app.js"]
 
 # to build/run the docker image for the mongobd using the dockerhub mongo image
-# docker run --name mongodb --rm -d -p 2701:27017 mongo
+# docker run --name mongodb --rm -d --network goals-net mongo
 
 # to build the docker image for the backend
 # docker build -t goals-node .
