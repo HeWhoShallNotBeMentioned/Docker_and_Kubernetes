@@ -10,7 +10,10 @@ COPY . .
 
 EXPOSE 80
 
-CMD ["node", "app.js"]
+ENV MONGODB_USERNAME=chris
+ENV MONGODB_PASSWORD=password
+
+CMD ["npm", "start"]
 
 # to build/run the docker image for the mongobd using the dockerhub mongo image
 # docker run --name mongodb --rm -d --network goals-net mongo
