@@ -1,11 +1,14 @@
 {
-  "name": "will-i-see-this",
+  "name": "testing_entrypoint",
   "version": "1.0.0",
-  "description": "",
+  "description": "afasf",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
 }
