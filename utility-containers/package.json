@@ -1,18 +1,11 @@
 {
-  "name": "adfljsaf",
+  "name": "testing",
   "version": "1.0.0",
-  "description": "asfsfddhdsh",
+  "description": "",
   "main": "index.js",
-  "dependencies": {
-    "colors": "^1.4.0"
-  },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "asgssg"
-  ],
-  "author": "asdfdsf",
+  "author": "",
   "license": "ISC"
 }
