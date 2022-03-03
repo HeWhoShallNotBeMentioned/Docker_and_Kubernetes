@@ -75,21 +75,19 @@ app.delete('/goals/:id', async (req, res) => {
   }
 });
 
-setTimeout(() => {
-  mongoose.connect(
-    `mongodb://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_URL}:27017/course-goals?authSource=admin`,
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    },
-    (err) => {
-      if (err) {
-        console.error('FAILED TO CONNECT TO MONGODB');
-        console.error(err);
-      } else {
-        console.log('CONNECTED TO MONGODB!!');
-        app.listen(80);
-      }
+mongoose.connect(
+  `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_URL}/${process.env.MONGODB_NAME}?retryWrites=true&w=majority`,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  (err) => {
+    if (err) {
+      console.error('FAILED TO CONNECT TO MONGODB');
+      console.error(err);
+    } else {
+      console.log('CONNECTED TO MONGODB!!');
+      app.listen(80);
     }
-  );
-}, 6000);
+  }
+);
